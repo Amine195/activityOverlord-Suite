@@ -1,0 +1,41 @@
+<div class="sign-up">
+  <div class="container-sign-up">
+    <div class="row">
+      <form action="/user/update/<%= user.id %>" method="POST" class="col s12" id="reg-form">
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input value="<%= user.name %>" id="name" name="name" type="text" class="validate">
+            <label for="name">Your Name</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input value="<%= user.title %>" id="title" name="title" type="text" class="validate">
+            <label for="title">Your Title</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input value="<%= user.email %>" id="email" name="email" type="email" class="validate">
+            <label for="email">Email Address</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <button class="btn btn-large btn-register waves-effect waves-light" type="submit" value="Create Account">Register
+              <i class="material-icons right">done</i>
+            </button>
+          </div>
+        </div>
+
+        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+      </form>
+    </div>
+  </div>
+  <!--<a title="Login" class="ngl btn-floating btn-large waves-effect waves-light red"><i class="material-icons">input</i></a> -->
+</div>

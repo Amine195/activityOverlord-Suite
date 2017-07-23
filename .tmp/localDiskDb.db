@@ -1,0 +1,72 @@
+{
+  "data": {
+    "user": [
+      {
+        "name": "Mohammed Amine",
+        "title": "GZL",
+        "email": "aaa@gmail.com",
+        "id": 1,
+        "createdAt": "2017-07-21T22:34:17.432Z",
+        "updatedAt": "2017-07-23T12:55:28.045Z"
+      },
+      {
+        "name": "aaa",
+        "title": "aaa",
+        "email": "aaaa@gmail.com",
+        "id": 2,
+        "createdAt": "2017-07-21T22:38:57.350Z",
+        "updatedAt": "2017-07-21T22:38:57.350Z"
+      },
+      {
+        "name": "bbb",
+        "title": "bbb",
+        "email": "bbb@gmail.com",
+        "id": 3,
+        "createdAt": "2017-07-21T22:42:29.984Z",
+        "updatedAt": "2017-07-21T22:42:29.984Z"
+      },
+      {
+        "name": "ddd",
+        "title": "ddd",
+        "email": "ddd@gmail.com",
+        "id": 4,
+        "createdAt": "2017-07-21T22:46:08.420Z",
+        "updatedAt": "2017-07-21T22:46:08.420Z"
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "name": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 4
+    }
+  }
+}
