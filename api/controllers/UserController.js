@@ -65,7 +65,6 @@ module.exports = {
 
   // render the edit view (e.g. /views/edit.ejs)
   edit: function (req, res, next) {
-
     // Find the user from the id passed in via params
     User.findOne(req.param('id'), function foundUser (err, user) {
       if(err) return next(err);
@@ -82,8 +81,18 @@ module.exports = {
       if (err) {
         return res.redirect('/user/edit/' + req.param('id'));
       }
-
       res.redirect('/user/show/' + req.param('id'));
+    });
+  },
+
+  destroy: function (req, res, next) {
+    User.findOne(req.param('id'), function foundUser (err, user) {
+      if (err) return next (err);
+      if(!user) return next('User doesn\'t exist');
+      User.destroy(req.param('id'), function userDestroyed(err) {
+        if (err) return next(err);
+      });
+      res.redirect('/user');
     });
   }
 };
