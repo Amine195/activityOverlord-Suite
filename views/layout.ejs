@@ -48,8 +48,13 @@
         <% if (session.authenticated) { %>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="/user/show/<%= session.User.id %>">Welcome <%= session.User.name %></a></li>
-            <li><a href="/user">User Administration</a></li>
             <li style="margin-right: 20px;"><a href="/session/destroy">Log-out</a></li>
+          </ul>
+        <% } %>
+
+        <% if (session.authenticated && session.User.admin) { %>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/user">User Administration</a></li>
           </ul>
         <% } %>
 
@@ -59,6 +64,7 @@
             <li style="margin-right: 20px;"><a href="/session/new">Login</a></li>
           </ul>
         <% } %>
+
       </div>
     </nav>
 

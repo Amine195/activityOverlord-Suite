@@ -24,6 +24,12 @@
           </div>
         </div>
 
+        <% if (session.authenticated && session.User.admin) { %>
+          <input type="hidden" id="admin" name="admin" value="<%= User.admin ? 'true' : 'false' %>">
+          <input id="is-admin" type="checkbox" <%= user.admin ?'checked':'' %> onClick="document.getElementById('admin').value = this.checked;">
+          <label for="is-admin">Admin</label>
+        <% } %>
+
         <div class="row">
           <div class="input-field col s12">
             <button class="btn btn-large btn-register waves-effect waves-light" type="submit" value="Create Account">Register
