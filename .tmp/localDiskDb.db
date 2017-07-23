@@ -5,9 +5,17 @@
         "name": "aaa",
         "title": "aaa",
         "email": "aaa@gmail.com",
+        "id": 6,
         "createdAt": "2017-07-23T13:40:58.950Z",
-        "updatedAt": "2017-07-23T13:40:58.950Z",
-        "id": 6
+        "updatedAt": "2017-07-23T13:40:58.950Z"
+      },
+      {
+        "name": "amine",
+        "title": "amine",
+        "email": "amine@gmail.fr",
+        "createdAt": "2017-07-23T13:57:42.102Z",
+        "updatedAt": "2017-07-23T13:57:42.102Z",
+        "id": 11
       }
     ]
   },
@@ -42,7 +50,7 @@
   },
   "counters": {
     "user": {
-      "id": 8
+      "id": 11
     }
   }
 }
