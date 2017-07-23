@@ -33,8 +33,11 @@ module.exports = {
         return res.redirect('/user/new');
       }
 
-      //After successfuly creating the user
-      //redirect to the show action
+      req.session.authenticated = true;
+      req.session.User = user;
+
+      // After successfuly creating the user
+      // redirect to the show action
       // from ep1-6 // res.json(user);
 
       res.redirect('user/show/'+user.id);
