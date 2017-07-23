@@ -44,11 +44,21 @@
     <nav>
       <div class="nav-wrapper grey darken-4">
         <a href="/" class="brand-logo">activityOverlord</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
+
+        <% if (session.authenticated) { %>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="/user/show/<%= session.User.id %>">Welcome <%= session.User.name %></a></li>
+            <li><a href="/user">User Administration</a></li>
+            <li style="margin-right: 20px;"><a href="/session/destroy">Log-out</a></li>
+          </ul>
+        <% } %>
+
+        <% if (!session.authenticated) { %>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/user/new">Register</a></li>
+            <li style="margin-right: 20px;"><a href="/session/new">Login</a></li>
+          </ul>
+        <% } %>
       </div>
     </nav>
 
@@ -76,7 +86,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
 
