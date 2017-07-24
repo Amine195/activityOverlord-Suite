@@ -1,15 +1,15 @@
 <div class="container">
-  <h1><%= user.name %></h1>
+  <h3><%= user.name %></h3>
   <% if(user.admin) {%>
     <img src="/images/admin.png" alt="admin"> admin
   <% } else { %>
     <img src="/images/pawn.png" alt="user"> pawn
   <% } %>
-  <h3><%= user.title %></h3>
+  <h5><%= user.title %></h5>
   <hr>
-  <h3>cantact: <%= user.email %></h3>
+  <h5>cantact: <%= user.email %></h5>
 
-  <a class="waves-effect waves-light btn" href="/user/edit/<%= user.id %>">Edit</a>
+  <a class="waves-effect waves-light green btn" href="/user/edit/<%= user.id %>">Edit</a>
 </div>
 
 <br>
