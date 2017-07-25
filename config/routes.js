@@ -32,8 +32,15 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'static/index'
+  // '/': {
+  //   view: 'static/index-particle'
+  // }
+
+  '/':{
+    view: 'static/index-particle',
+    locals: {
+      layout: 'layout-particle.ejs'
+    }
   }
 
   /***************************************************************************
