@@ -32,9 +32,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  // '/': {
-  //   view: 'static/index-particle'
-  // }
+  '/home': {
+    view: 'static/index'
+  },
 
   '/':{
     view: 'static/index-particle',
